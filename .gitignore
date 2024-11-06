@@ -1,0 +1,15 @@
+*
+
+!.gitignore
+
+!.config/
+!.config/**
+
+
+.config/tmux/plugins/
+
+
+.config/nvm
+
+.config/gh/hosts.yml
+
