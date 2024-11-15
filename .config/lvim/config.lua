@@ -32,7 +32,7 @@ lvim.builtin.which_key.mappings["t"] = {
   b = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "buffer" },
   q = { "<cmd>Trouble qflist toggle<cr>", "quickfix" },
   l = { "<cmd>Trouble loclist toggle<cr>", "loclist" },
-  r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+  r = { "<cmd>Trouble lsp_references<cr>", "references" },
 }
 
 lvim.format_on_save.enabled = true
