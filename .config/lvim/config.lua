@@ -29,7 +29,7 @@ lvim.plugins = {
 lvim.builtin.telescope.cmd = "Telescope"
 
 lvim.builtin.which_key.mappings["f"] = {
-  name = "Diagnostics",
+  name = "Find Telescope",
   f = { "<cmd>Telescope find_files<cr>", "Telescope find files" },
   g = { "<cmd>Telescope live_grep<cr>", "Telescope live grep" },
   b = { "<cmd>Telescope buffers<cr>", "Telescope buffers" },
@@ -37,7 +37,7 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 
 lvim.builtin.which_key.mappings["t"] = {
-  name = "Diagnostics",
+  name = "Trouble",
   t = { "<cmd>Trouble diagnostics toggle<cr>", "trouble" },
   b = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "buffer" },
   q = { "<cmd>Trouble qflist toggle<cr>", "quickfix" },
