@@ -81,4 +81,4 @@ formatters.setup {
     filetypes = { "typescript", "typescriptreact" },
   },
 }
-lvim.kormat_on_save.enabled = false
+lvim.format_on_save.enabled = false
