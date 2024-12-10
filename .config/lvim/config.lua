@@ -23,7 +23,18 @@ lvim.plugins = {
       vim.cmd("let g:minimap_auto_start_win_enter = 1")
       vim.cmd("Minimap")
     end,
-  }
+  },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    lazy = false,
+    config = function()
+      require("refactoring").setup()
+    end,
+  },
 }
 
 lvim.builtin.telescope.cmd = "Telescope"
@@ -45,6 +56,17 @@ lvim.builtin.which_key.mappings["t"] = {
   r = { "<cmd>Trouble lsp_references<cr>", "references" },
 }
 
+lvim.builtin.which_key.mappings["r"] = {
+  name = "Refactor",
+  e = { "<cmd>Refactor extract<cr>", "Extract" },
+  f = { "<cmd>Refactor extract_to_file<cr>", "Extract to file" },
+  v = { "<cmd>Refactor extract_var<cr>", "Extract var" },
+  i = { "<cmd>Refactor inline_var<cr>", "Inline var" },
+  I = { "<cmd>Refactor inline_func<cr>", "Inline func" },
+  b = { "<cmd>Refactor extract_block<cr>", "Extract block" },
+  B = { "<cmd>Refactor extract_block_to_file<cr>", "Extract block to file" },
+}
+
 lvim.format_on_save.enabled = true
 
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -59,3 +81,4 @@ formatters.setup {
     filetypes = { "typescript", "typescriptreact" },
   },
 }
+lvim.kormat_on_save.enabled = false
